@@ -13,3 +13,9 @@ services:
     image: postgres
     environment:
       POSTGRES_PASSWORD: example
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app      
